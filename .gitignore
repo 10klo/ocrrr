@@ -1,0 +1,23 @@
+# Virtual environment
+venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# User config (contains secrets)
+config.json
+config.key
+
+# Output directories
+OCR Chunks/
+OCR results/
+OCR Results/
+debug_chunks/
+
+# Output files
+*.html
+*.txt
+*.epub
+progress.json
