@@ -5,6 +5,9 @@ on:
   push:
     tags: ["v*"]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: windows-latest
@@ -19,7 +22,7 @@ jobs:
 
       - run: pyinstaller ocrrr.spec
 
-      - uses: actions/upload-artifact@v4
+      - uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
         with:
-          name: ocrrr-windows
-          path: dist/ocrrr/ocrrr.exe
+          files: dist/ocrrr/ocrrr.exe
