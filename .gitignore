@@ -21,3 +21,8 @@ debug_chunks/
 *.txt
 *.epub
 progress.json
+
+# PyInstaller
+build/
+dist/
+*.spec.bak
